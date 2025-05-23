@@ -1,0 +1,228 @@
+*, p, h1, h2, h3, h4, h5, h6, span {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color-900: #004D40;
+  --primary-color-500: #009688;
+  --primary-color-50:#E0F2F1;
+  --secondary-color: #1c54b2;
+  --secondary-color-400:#42A5F5;
+  --other-color:#d50000;
+  --foreground-color: #0F1419;
+  --background-color: white;
+  --gray-dark-color: #66757F;
+  --gray-light-color: #edeff1;
+}
+
+body {
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+}
+
+.app-container {
+  margin: 0 auto;
+}
+
+.loading {
+  position: sticky;
+  top: 0;
+  background-color: 'blue';
+  height: '5px'
+}
+
+.nav-container {
+  padding-top: 10px;
+  background-color: var(--primary-color-900);
+}
+
+.navigation {
+  background-color: var(--primary-color-500);
+}
+
+.navigation .navlink {
+  text-decoration: none;
+  color: var(--background-color);
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.navigation button {
+  background-color: transparent;
+  border: 0;
+  padding: 10px 0px;
+  margin: 0px 10px;
+  border-bottom: 2px solid var(--primary-color-500);
+}
+
+.navigation button:hover {
+  border-bottom: 2px solid var(--gray-light-color);
+}
+
+.navigation .logo {
+  font-size: 1.75rem;
+}
+
+.navigation-bottom {
+  align-items: center;
+  border-top: 1px solid #d1d5db;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 64px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.login-page, .register-page {
+  min-height: 90vh;
+  padding: 2rem 5rem;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  background-color: var(--primary-color-50);
+}
+
+.login-input button, .register-input button {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color-400);
+}
+
+.login-input button:hover, .register-input button:hover {
+  background-color: var(--secondary-color-400);
+  border-color: var(--secondary-color-400);
+}
+
+.home-page, .detail-page, .leaderboard-page, .new-thread-page {
+  padding: 2rem 5rem;
+  margin-bottom: 50px;
+}
+
+.threads-list {
+  margin-top: 0.75rem;
+}
+
+.thread-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--primary-color-900);
+}
+
+.thread-item__footer {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-category {
+  padding: 4px 6px;
+  margin-bottom: 0.75rem;
+  font-size: 12px;
+}
+
+.thread-content, .comment-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.thread-comment__input {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.thread-comment__list {
+  border-top: 1px solid var(--primary-color-900);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.comment-item .text-right {
+  text-align: right;
+}
+
+.comment-item__footer {
+  display: flex;
+  gap: 10px;
+}
+
+
+.owner-info img {
+  border-radius: 50%;
+  width: 24px;
+}
+
+.comment-item .owner-info img {
+  border-radius: 50%;
+  width: 48px;
+}
+
+.leaderboards-list {
+  display: flex;
+  gap: 0.75rem;
+  flex-direction: column;
+}
+
+.leaderboard-item__user {
+  display: flex;
+  gap: 1rem;
+}
+
+.new-thread-button {
+  background-color: transparent;
+  border: 0;
+  bottom: 65px;
+  color: var(--other-color);
+  cursor: pointer;
+  font-size: 48px;
+  position: fixed;
+  right: 32px;
+  z-index: 10;
+}
+
+.tumbs {
+  background-color: transparent;
+  border: 0;
+}
+
+.comment-date {
+  color: var(--gray-dark-color);
+}
+
+.comment-body {
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: var(--gray-light-color);
+}
+
+.add-new-page__input__body {
+  width: 100%;
+  background-color: transparent;
+  color: var(--foreground-color);
+  font-size: 1rem;
+  padding: 8px;
+  min-height: 120px;
+  border-radius: 10px;
+}
+
+@media (max-width: 767.98px) { 
+  .home-page, .detail-page, .leaderboard-page, .new-thread-page {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 575.98px) { 
+  .home-page, .detail-page, .leaderboard-page, .new-thread-page {
+    padding: 1rem;
+  }
+}
