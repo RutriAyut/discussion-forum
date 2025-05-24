@@ -25,7 +25,7 @@ function threadDetailReducer(threadDetail = null, action = {}) {
   case ActionType.NEUTRAL_VOTE_THREAD:
     return {
       ...threadDetail,
-      upVotesBy: threadDetail.comments.upVotesBy.filter((id) => id !== action.payload.userId),
+      upVotesBy: threadDetail.upVotesBy.filter((id) => id !== action.payload.userId),
       downVotesBy: threadDetail.downVotesBy.filter((id) => id !== action.payload.userId),
     };
   case ActionType.UP_VOTE_COMMENT:
