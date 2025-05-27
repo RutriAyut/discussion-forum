@@ -18,15 +18,15 @@ function RegisterInput({ register }) {
     <Form className='register-input' onKeyDown={onRegisterPress}>
       <Form.Group className='mb-3'>
         <Form.Label>Name</Form.Label>
-        <Form.Control type='text' value={name} onChange={onNameChange}/>
+        <Form.Control type='text' value={name} onChange={onNameChange} placeholder='Name'/>
       </Form.Group>
       <Form.Group className='mb-3'>
         <Form.Label>Email</Form.Label>
-        <Form.Control type='email' value={email} onChange={onEmailChange}/>
+        <Form.Control type='email' value={email} onChange={onEmailChange} placeholder='Email'/>
       </Form.Group>
       <Form.Group className='mb-3'>
         <Form.Label>Password</Form.Label>
-        <Form.Control type='password' value={password} onChange={onPasswordChange} />
+        <Form.Control type='password' value={password} onChange={onPasswordChange} placeholder='Password' />
       </Form.Group>
       <Button onClick={() => register({ name, email, password })}>Register</Button>
     </Form>

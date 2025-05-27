@@ -22,7 +22,8 @@ function ThreadInput({ addThread }) {
           className='form-control add-new-page__input__body border'
           value={body}
           onInput={onBodyChange}
-          contentEditable>
+          contentEditable
+          title='body-thread'>
         </div>
       </Form.Group>
       <Button onClick={() => addThread({ title, category, body })}>Mulai Diskusi</Button>

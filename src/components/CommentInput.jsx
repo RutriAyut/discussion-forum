@@ -14,7 +14,8 @@ function CommentInput({ addComment, id }) {
           data-placeholder='Tinggalkan Komentar di sini'
           value={content}
           onInput={onContentChange}
-          contentEditable>
+          contentEditable
+          title='comment-content'>
         </div>
         <Button onClick={() => addComment({ id, content })}>Kirim</Button>
       </Form>
