@@ -6,11 +6,13 @@ module.exports = {
   extends: [
     'standard',
     'plugin:react/recommended',
+    'plugin:cypress/recommended',
   ],
   overrides: [
     {
       env: {
         node: true,
+        'cypress/globals': true,
       },
       files: [
         '.eslintrc.{js,cjs}',
@@ -26,6 +28,7 @@ module.exports = {
   },
   plugins: [
     'react',
+    'cypress',
   ],
   rules: {
     indent: ['error', 2],

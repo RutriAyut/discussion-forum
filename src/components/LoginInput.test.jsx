@@ -53,7 +53,7 @@ describe('LoginInput component', () => {
     await userEvent.type(emailInput, 'emailtest@gmail.com');
     const passwordInput = await screen.getByPlaceholderText('Password');
     await userEvent.type(passwordInput, 'passwordtest');
-    const loginButton = await screen.getByRole('button', { name: 'Login' });
+    const loginButton = await screen.getByRole('button', { name: 'Login Now' });
 
     // Action
     await userEvent.click(loginButton);

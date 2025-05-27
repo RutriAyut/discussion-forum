@@ -23,7 +23,7 @@ function LoginInput({ login }) {
         <Form.Label>Password</Form.Label>
         <Form.Control type='password' value={password} onChange={onPasswordChange} placeholder='Password' />
       </Form.Group>
-      <Button onClick={() => login({ email, password })}>Login</Button>
+      <Button onClick={() => login({ email, password })}>Login Now</Button>
     </Form>
   );
 }
