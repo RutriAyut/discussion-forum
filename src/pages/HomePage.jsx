@@ -5,6 +5,7 @@ import asyncPopulateUsersAndThreads from '../states/shared/action';
 import { useNavigate } from 'react-router-dom';
 import { asyncToggleUpVoteThreads, asyncToggleDownVoteThreads, asyncToggleNeutralVoteThreads } from '../states/threads/action';
 import CategoriesList from '../components/CategoriesList';
+import ButtonAdd from '../components/ButtonAdd';
 
 function HomePage() {
   const {
@@ -67,9 +68,7 @@ function HomePage() {
         <ThreadsList threads={threadsList} upVote={onUpVote} downVote={onDownVote} />
       </section>
       { authUser &&
-      <button className='new-thread-button' onClick={() => onAddThread()}>
-        <i className='bi bi-plus-circle-fill'></i>
-      </button>
+        <ButtonAdd onAddThread={() => onAddThread()} />
       }
     </>
   );

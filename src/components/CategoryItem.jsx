@@ -21,8 +21,12 @@ function CategoryItem({ category, disabled, keyword, onKeyword }) {
 export default CategoryItem;
 
 CategoryItem.propTypes = {
+  /** Category yang ditampilkan */
   category: PropTypes.string.isRequired,
+  /** Button Category yang tidak bisa di click */
   disabled: PropTypes.bool,
+  /** Keyword Category yang sedang aktif */
   keyword: PropTypes.string,
+  /** Funsi untuk mensortir Thread sesuai Kategori */
   onKeyword: PropTypes.func,
 };

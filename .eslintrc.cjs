@@ -3,11 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'standard',
-    'plugin:react/recommended',
-    'plugin:cypress/recommended',
-  ],
+  extends: ['standard', 'plugin:react/recommended', 'plugin:cypress/recommended', 'plugin:storybook/recommended'],
   overrides: [
     {
       env: {
