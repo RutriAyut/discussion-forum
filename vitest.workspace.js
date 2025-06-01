@@ -19,6 +19,7 @@ export default defineWorkspace([
       storybookTest({ configDir: path.join(dirname, '.storybook') }),
     ],
     test: {
+      exclude: ['**/*.stories.js'],
       name: 'storybook',
       browser: {
         enabled: true,
